@@ -57,18 +57,6 @@ Este projeto antecipa esses cenários por meio de previsões simples e indicador
 
 ---
 
-## Exemplo de Heatmap de Risco
-
-Verde = Baixo | Amarelo = Médio | Vermelho = Alto
-
-```text
-ADITIVOS  MÉDIO  ALTO   ALTO
-PEBD      BAIXO  MÉDIO  ALTO
-PEBDL     BAIXO  BAIXO  ALTO
-PEAD      BAIXO  BAIXO  MÉDIO
-
-
-
 ## Resultados Visuais
 
 ### Heatmap de Risco
@@ -77,4 +65,43 @@ PEAD      BAIXO  BAIXO  MÉDIO
 
 ### Forecast de Demanda
 
-![Forecast](outputs/pebd_demanda_estoque.png)
+![Forecast PEBD](outputs/pebd_demanda_estoque.png)
+
+### Forecast Material Crítico
+
+![Forecast Aditivos](outputs/aditivos_demanda_estoque.png)
+
+---
+
+## Lógica de Classificação de Risco
+
+| Situação | Status |
+|--------|--------|
+| Estoque saudável | BAIXO |
+| Estoque menor que 1 período de consumo | MÉDIO |
+| Estoque zerado ou negativo | ALTO |
+
+---
+
+## Estrutura do Projeto
+
+```bash
+forecast-materiais-industriais/
+│
+├── data/
+│   └── consumo_materiais.csv
+│
+├── outputs/
+│   ├── forecast_resultado.csv
+│   ├── heatmap_risco.png
+│   └── gráficos gerados
+│
+├── src/
+│   ├── preprocess.py
+│   ├── forecast.py
+│   ├── visualize.py
+│   ├── heatmap.py
+│   └── main.py
+│
+├── requirements.txt
+└── README.md
