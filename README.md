@@ -66,3 +66,15 @@ ADITIVOS  MÉDIO  ALTO   ALTO
 PEBD      BAIXO  MÉDIO  ALTO
 PEBDL     BAIXO  BAIXO  ALTO
 PEAD      BAIXO  BAIXO  MÉDIO
+
+
+
+## Resultados Visuais
+
+### Heatmap de Risco
+
+![Heatmap](outputs/heatmap_risco.png)
+
+### Forecast de Demanda
+
+![Forecast](outputs/pebd_demanda_estoque.png)
